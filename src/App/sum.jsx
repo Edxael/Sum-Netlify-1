@@ -9,24 +9,27 @@ export default class extends Component{
 
     exe1(){
         console.log("Hello from Exe1")
+        console.log(this.state)
+
+        this.setState({ total: parseInt( this.state.num1, 0 ) + parseInt( this.state.num2, 0 ) })
     }
 
     render(){
         return(
             <div className="main-cont">
 
-                <h1>Sum Numbers</h1>
+                <h1>Sum Numbers--</h1>
 
-                <input type="text" value={this.state.num1} onChange={ this.exe1.bind(this) } />
+                <input type="text" value={this.state.num1} onChange={ (e) => { this.setState({ num1: e.target.value }) } } />
                 <br/><br/>
 
-                <input type="text" />
+                <input type="text" value={this.state.num2} onChange={ (e) => { this.setState({ num2:  e.target.value }) } } />
                 <br/><br/>
 
                 <input type="submit" onClick={this.exe1.bind(this)}/>
                 <br/><br/>
 
-                <input type="text"/>
+                <input type="text" value={ this.state.total }/>
 
             </div>
         )
