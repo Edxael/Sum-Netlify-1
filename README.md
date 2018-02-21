@@ -11,3 +11,7 @@
 - Branch: Master
 - Build Command: npm run build
 - Public Directory: build/
+
+
+Video with information on deployment: 
+https://www.youtube.com/watch?v=lCcBEDPTk4o
